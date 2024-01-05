@@ -1,1 +1,2 @@
-![VärderingsMaskinen](https://github.com/frankuman/TheEvaluatorMachine/assets/57047010/10e1ed7c-2871-4a96-95b7-1c35be555fd9)
+![image](https://github.com/frankuman/Swedish-housing-market-ML/assets/57047010/c7d51d4d-6136-40be-9212-ff37ff4dd0d3)
+
