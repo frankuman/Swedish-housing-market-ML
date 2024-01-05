@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+{% block scripts %}
+
+
+{% endblock %}
+<title>VärderingsMaskinen</title>
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="social">
+    <a href="https://github.com/frankuman/Swedish-housing-market-ML"><div class="go"><i class="fab fa-github"> </i>  Github</div></a>
+</div>
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<div class="entry">
+
+
+        <!-- Include other form fields here -->
+        <form form="post">
+            <div class="error-message">
+                {% if message %}
+                    {{ message }}
+                {% endif %}
+            </div>
+            <label for="property_type">Bostadstyp</label>
+            <select id="property_type" name="property_type">
+                <option value="lägenhet">Lägenhet</option>
+                <option value="villa">Villa</option>
+                <option value="radhus">Radhus</option>
+            </select>
+        
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Stortorget 2">
+        
+            <label for="build_year">Byggnadsår</label>
+            <input type="number" id="build_year" name="build_year" placeholder="2022" min="1800" max="2023">
+        
+            <label for="living_area">Boarea</label>
+            <input type="number" id="living_area" name="living_area" placeholder="41" min="1">
+
+            <label for="living_area">Tomtarea</label>
+            <input type="number" id="land_area" name="land_area" placeholder="0" min="0">
+
+            <label for="county">Kommun</label>
+            <input type="text" id="county" name="county" placeholder="Karlskrona">
+        
+            <label for="rooms">Rum</label>
+            <input type="number" id="rooms" name="rooms" placeholder="1" min="1" max="15">
+
+            <label for="rooms">Avgift</label>
+            <input type="number" id="fee" name="fee" placeholder="5000" min="0" max="30000">
+
+            <label for="balcony">Balkong</label>
+            <select id="balcony" name="balcony">
+                <option value="Ja">Ja</option>
+                <option value="Nej">Nej</option>
+            </select>
+        
+
+
+
+        <input class="formbutton" type="submit" formmethod="post" formaction="/" value="Värdera">
+
+    </form>
+</div>
+{% endblock %}
+
