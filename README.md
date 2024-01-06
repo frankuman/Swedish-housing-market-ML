@@ -58,11 +58,18 @@ and gets a mean error of 9% of the mean price
 
 ## Getting Started
 1. Navigate to the `/data/` directory and unzip the `prop.rar`. Ensure the extracted file is named `prop.json`.
-2. (**Auto creation**).```python autocreate.py```
-3. (**Manual creation / Teacher variant**). Open the `create.ipynb` Jupyter notebook file and execute the provided steps. Note: Some steps may should not be run if it says so. This should take a maximum time of 10 minutes.
+2. (**Auto creation**). Execute the following command for automatic creation, note that is usually trains within 10 minutes:
+   ```bash
+   python autocreate.py
+   ```
+   -OR-
+3. (**Manual creation / Teacher variant**). Open the `create.ipynb` Jupyter notebook file and execute the provided steps. Note: Some steps may not be necessary, follow the instructions in the notebook. This process may take a maximum of 10 minutes.
 4. Start the valuator by running:
-  ```python autocreate.py```
+   ```bash
+   python autocreate.py
+   ```
 5. Open your web browser and go to `127.0.0.1:5000`.
+
 
 ## Configuration
 The `create.ipynb` Jupyter notebook file can be modified to implement different approaches to the problem.
