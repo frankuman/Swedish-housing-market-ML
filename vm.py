@@ -1,23 +1,19 @@
 
+"""
+Oliver Bölin
+BTH, 2024
+Backend
+"""
 import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
-from geopy.geocoders import Nominatim
 from sklearn.preprocessing import LabelEncoder
-import geopy.geocoders
 import pandas as pd
-import json
-from datetime import datetime
-from sklearn.model_selection import GridSearchCV
-from geopy.geocoders import Nominatim
-import requests
 from sklearn.metrics import r2_score
 from sklearn.metrics import explained_variance_score
 from sklearn.metrics import mean_squared_log_error
 from sklearn.metrics import mean_absolute_error
-import numpy as np
 import joblib
 
 loaded_model = joblib.load('vm.pkl')
@@ -76,7 +72,7 @@ def main():
     print("Running")
     from frontend import dashboard
 
-    dashboard.app.run(host="127.0.0.1", debug=True)
+    dashboard.app.run(host="127.0.0.1")
 
 if __name__ == "__main__":
     main()

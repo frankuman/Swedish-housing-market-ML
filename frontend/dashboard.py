@@ -1,4 +1,6 @@
 """
+Oliver Bölin
+BTH, 2024
 Flask frontend
 """
 from flask import Flask, render_template, request, jsonify, redirect,url_for
@@ -6,7 +8,6 @@ import json
 from geopy.geocoders import Nominatim
 import ssl
 import geopy.geocoders
-import certifi
 import vm
 app = Flask(__name__)
 
