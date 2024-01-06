@@ -40,34 +40,41 @@ and gets a mean error of 9% of the mean price
 - [Known Issues](#known-issues)
   
 ## Features
-- Valuator
-- GUI
+- **Valuator**: Uses a 600k large database of swedish housing market and random forest regressor to predict it.
+- **GUI**: Python flask GUI for easier usage.
+
 ## Requirements
 - Python 3.7.0 or higher
 - Pip
 - Network connection
-  
+
 ## Installation
-1. Download the files either using **git** or manual download.
-2. Run `pip install -r requirements.txt` on the machine.
+1. Download the project files using either **git** or manual download.
+2. Open a terminal and navigate to the project directory.
+3. Run the following command to install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Getting Started
-1. Go to /data/ and unzip the prop.rar. Important to keep the name prop.json
-1. Open the create.ipynb jupyter file and run the steps. Some steps should not be run. This might also take a while
-2. Start the valuator:  `python vm.py`
-3. Go to 127.0.0.1:5000 in your webbrowser
+1. Navigate to the `/data/` directory and unzip the `prop.rar`. Ensure the extracted file is named `prop.json`.
+2. (**Auto creation**).```python autocreate.py```
+3. (**Manual creation / Teacher variant**). Open the `create.ipynb` Jupyter notebook file and execute the provided steps. Note: Some steps may should not be run if it says so. This should take a maximum time of 10 minutes.
+4. Start the valuator by running:
+  ```python autocreate.py```
+5. Open your web browser and go to `127.0.0.1:5000`.
 
 ## Configuration
-The jupyter file create.ipynb can be modified to create different approaches to the problem.
+The `create.ipynb` Jupyter notebook file can be modified to implement different approaches to the problem.
 
 ## Usage
-1. Go to 127.0.0.1:5000 in your webbrowser
-2. Enter the criterias needed (all are needed, enter 0 if there is no criteria)
-3. Wait for 10 seconds
-4. See results
-   
+1. Visit `127.0.0.1:5000` in your web browser.
+2. Enter the required criteria (all are mandatory; enter 0 if there is no specific value).
+3. Wait for approximately 10 seconds.
+4. Review the results.
+
 ## Known Issues
-Sometimes Nomatim gives SSL certificate error. I do not know why but this has resolved for me in the latest issue. Might need to refresh the SSL certificates in python requests to fix the issue
+- Occasionally, Nominatim may encounter SSL certificate errors. This issue seems to have been resolved in the latest release. If encountered, try refreshing the SSL certificates in Python requests to resolve the problem.
 
 Thank you
 
