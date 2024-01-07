@@ -82,6 +82,13 @@ The `create.ipynb` Jupyter notebook file can be modified to implement different 
 
 ## Known Issues
 - Occasionally, Nominatim may encounter SSL certificate errors. This issue seems to have been resolved in the latest release. If encountered, try refreshing the SSL certificates in Python requests to resolve the problem.
+To fix the issue for me, i used these commands
+```bash
+python -m pip install python-certifi-win32
+```
+```bash
+pip install  --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org python-certifi-win32
+```
 
 Thank you
 
