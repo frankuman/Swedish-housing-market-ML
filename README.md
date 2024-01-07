@@ -7,27 +7,33 @@
 
 ## Project Overview
 The housing market has always been a challenge to predict.
-In 2023 house prices decreased by 6%, but in general apart-
-ment prices increased. Housing in Sweden in the last 12 years
-alone has risen an astounding 85% (adjusted to inflation) to
-the top of 2021, but fallen a bit since then. With housing prices
-of a median in 2.3 million Swedish krona, buying residency
-is often the biggest investment a person does in their life.
-The best way to sell a house has always, through out
-time, been to evaluate it with a broker. The broker checks
-the price similarity in the region, area, and street. Calculates
-the average price per square meter and then takes the sellers
-apartments size and calculates accordingly. The amount of
-rooms, balcony, and the age of the apartment may vary the
-listing price, but it is usually the bidding price that is harder
-to predict, since the time, economy many other factors can
-change it alot. 
+In 2023 house prices decreased by 6%, but in general apartment prices increased. Housing in Sweden in the last 12 years
+alone has risen an astounding 85% (adjusted to inflation) to the
+top of 2021 but has fallen a bit since then. With housing prices
+of a median of 2.3 million Swedish krona, buying residency
+is often the biggest investment a person makes in their life.
+The best way to sell a house has always, throughout time,
+been to valuate it with a broker. The broker checks the price
+similarity in the region, area, and street. Calculates the average
+price per square meter and then takes the seller’s apartment
+size and calculates accordingly. The amount of rooms, balcony,
+and the age of the apartment may vary the listing price, but
+it is usually the bidding price that is harder to predict, since
+time, economy and many other factors can change it alot. [1],
+[2]
+But how can a buyer valuate a house listing? The current
+landscape lacks simple solutions for non-experienced buyers,
+and navigating though real estate data can be a perplexing
+task and the buyer could lose their interest. Relying entirely
+on a broker’s valuation poses its own challenges, as these
+valuations might fluctuate. There is a need for a simple
+solution that only relies on data, and is easy to use. That
+is why VarderingsMaskingen ( ¨ The Valuation Machine) will
+valuate almost any housing, even if the sort of housing doesn’t
+even exist. It uses Random Forest Regressor to learn from a
+database including 600,000 different listings and gets a mean
+error of 9% of the mean price.
 
-That is why VarderingsMaskingen (The Valuation Machine)
-will evaluate the housing of your choice, even if the sort of
-housing doesn’t even exist. It uses Random Forest Regressor
-to learn from a database including 600,000 different listings,
-and gets a mean error of 9% of the mean price
 
 ## Table of Contents
 - [Project Overview](#project-overview)
