@@ -19,8 +19,9 @@ price per square meter and then takes the seller’s apartment
 size and calculates accordingly. The amount of rooms, balcony,
 and the age of the apartment may vary the listing price, but
 it is usually the bidding price that is harder to predict, since
-time, economy and many other factors can change it alot. [1],
-[2]
+time, economy and many other factors can change it a lot.
+
+
 But how can a buyer valuate a house listing? The current
 landscape lacks simple solutions for non-experienced buyers,
 and navigating though real estate data can be a perplexing
