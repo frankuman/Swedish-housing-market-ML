@@ -1,4 +1,9 @@
-# 0. import
+
+"""
+Oliver Bölin
+BTH, 2023
+More comments are in the jupyter file
+"""
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
@@ -18,7 +23,7 @@ from sklearn.metrics import mean_squared_log_error
 from sklearn.metrics import mean_absolute_error
 import numpy as np
 import joblib
-import time
+
 
 print("Starting step 1/7...")
 with open("data/prop.json", encoding="utf-8") as data:
@@ -107,7 +112,6 @@ df.dropna(subset=['population_density', 'wanted_price'], inplace=True)
 #This effectively removes 100 000 entries into the data
 # 1.3 save as CSV
 print("Starting step 3/7...")
-
 df.to_csv("prop_modified.csv", index=False, sep=";")
 # Select a subset of non-numeric features for encoding
 
@@ -117,9 +121,11 @@ categorical_features = ["property_type", "county", "area", "balcony"]
 # Encode categorical features using LabelEncoder
 label_encoder = LabelEncoder()
 for feature in categorical_features:
+
     df[feature] = label_encoder.fit_transform(df[feature])
 # Combine numeric and encoded non-numeric features
 X = df.drop(columns=["wanted_price"])  # Use all columns except the target variable
+
 y = df["wanted_price"]
 
 # StandardScaler as scaler
@@ -141,7 +147,6 @@ r2 = r2_score(y_test, y_pred)
 #prec = precision_score(y_test, y_pred)
 msle = mean_squared_log_error(y_test, y_pred)
 mean_price = np.mean(y)
-
 
 print(f"Mean Absolute Error: {mae}")
 print(f"R-squared: {r2}")

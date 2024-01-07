@@ -20,6 +20,7 @@ def start():
     """
     message = ""
     print(request.method)
+    # this is just flask stuff
     if request.method == 'POST':
         # Get form data
         adress = request.form.get('address', '')
@@ -31,7 +32,7 @@ def start():
         fee = request.form.get('fee', '')
         rooms = request.form.get('rooms', '')
         balcony = request.form.get('balcony', '')
-
+        # check that all data is there
         if (adress and property_type and build_year and living_area and
                 land_area and county and fee and rooms and balcony):
             print("Form data:", {
@@ -60,7 +61,7 @@ def start():
             geolocator = Nominatim(user_agent='VarderingsMaskinen', ssl_context=ctx, adapter_factory=geopy.adapters.URLLibAdapter)
             full_address = f"{county}, {adress}"
 
-
+            # geocode it
             location = geolocator.geocode(full_address)
             
             if location:
@@ -69,11 +70,12 @@ def start():
                 display_name = location.raw.get('display_name', '')
                 print(display_name)
                 area_parts = display_name.split(', ')
-                if len(area_parts) >= 4:
+                if len(area_parts) >= 4:    #the result always depends, [2] can be the street, town, or county
                     area = area_parts[2]
                     area = area.lower().strip()
                 else:
                     area = county
+                #since the population density user _ instead of " ", we need to convert the user input
                 area = area.replace(' ', '_')
                 area_parts = area.split('-')
                 if area_parts:
@@ -95,7 +97,7 @@ def start():
                     "age": 1,
                     "population_density": population_density
                 }
-                low_p, med_p, high_p = vm.run_model(user_input)
+                low_p, med_p, high_p = vm.run_model(user_input) #run the model on the result
                 return redirect(url_for('evaluate', high_p=high_p, med_p=med_p, low_p=low_p, user_input=user_input,adress=adress, property_type=property_type, build_year=build_year,
                            living_area=living_area, county=county, land_area=land_area, area=area, fee=fee, rooms=rooms,
                            balcony=balcony, population_density=population_density))
@@ -125,6 +127,7 @@ def evaluate():
     Returns:
         template: 
     """
+    # this is mostly just for show
     high_p = request.args.get('high_p', '')
     med_p = request.args.get('med_p', '')
     low_p = request.args.get('low_p', '')

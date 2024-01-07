@@ -1,11 +1,5 @@
  /* 
-Dark-grey = 282B30
-Light-grey = 5F6368
-Light-blue = 565880
-Unselected-text = ECECF9 (40% opacity)
-Selected-text (primary text) = ECECF9 (100% opacity)
-border-radius: 20px; for boxes
-box-shadow: 6px 12px 14px #282B30;
+I just had a project that included frontend, so i used some of that experience
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
