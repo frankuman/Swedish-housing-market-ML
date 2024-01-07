@@ -1,4 +1,5 @@
-![image](https://github.com/frankuman/Swedish-housing-market-ML/assets/57047010/c7d51d4d-6136-40be-9212-ff37ff4dd0d3)
+
+![Untitled-1](https://github.com/frankuman/Swedish-housing-market-ML/assets/57047010/be871018-a027-4dd9-bd96-06f7979981dd)
 
 # VärderingsMaskinen - A machine learned valuator for the swedish housing market
 
