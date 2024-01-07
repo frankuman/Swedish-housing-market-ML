@@ -66,7 +66,7 @@ and gets a mean error of 9% of the mean price
 3. (**Manual creation / Teacher variant**). Open the `create.ipynb` Jupyter notebook file and execute the provided steps. Note: Some steps may not be necessary, follow the instructions in the notebook. This process may take a maximum of 10 minutes.
 4. Start the valuator by running:
    ```bash
-   python autocreate.py
+   python vm.py
    ```
 5. Open your web browser and go to `127.0.0.1:5000`.
 
